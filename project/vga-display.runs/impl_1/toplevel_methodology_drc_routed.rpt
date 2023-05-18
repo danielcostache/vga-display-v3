@@ -1,0 +1,40 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
+| Date         : Thu May 18 13:48:01 2023
+| Host         : Cygnus running 64-bit major release  (build 9200)
+| Command      : report_methodology -file toplevel_methodology_drc_routed.rpt -pb toplevel_methodology_drc_routed.pb -rpx toplevel_methodology_drc_routed.rpx
+| Design       : toplevel
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 1
++----------+------------------+-----------------------------------------+------------+
+| Rule     | Severity         | Description                             | Violations |
++----------+------------------+-----------------------------------------+------------+
+| TIMING-8 | Critical Warning | No common period between related clocks | 1          |
++----------+------------------+-----------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-8#1 Critical Warning
+No common period between related clocks  
+The clocks refresh_divider/refresh_clock and PIN_SystemClock_100MHz are found related (timed together) but have no common (expandable) period
+Related violations: <none>
+
+

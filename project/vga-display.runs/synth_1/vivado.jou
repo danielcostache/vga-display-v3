@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Thu May 18 13:45:23 2023
+# Process ID: 18904
+# Current directory: C:/Work/VGA Display/vga-display-v3/project/vga-display.runs/synth_1
+# Command line: vivado.exe -log toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source toplevel.tcl
+# Log file: C:/Work/VGA Display/vga-display-v3/project/vga-display.runs/synth_1/toplevel.vds
+# Journal file: C:/Work/VGA Display/vga-display-v3/project/vga-display.runs/synth_1\vivado.jou
+# Running On: Cygnus, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 17047 MB
+#-----------------------------------------------------------
+source toplevel.tcl -notrace

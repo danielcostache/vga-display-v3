@@ -1,0 +1,425 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Thu May 18 13:45:23 2023
+# Process ID: 18904
+# Current directory: C:/Work/VGA Display/vga-display-v3/project/vga-display.runs/synth_1
+# Command line: vivado.exe -log toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source toplevel.tcl
+# Log file: C:/Work/VGA Display/vga-display-v3/project/vga-display.runs/synth_1/toplevel.vds
+# Journal file: C:/Work/VGA Display/vga-display-v3/project/vga-display.runs/synth_1\vivado.jou
+# Running On: Cygnus, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 17047 MB
+#-----------------------------------------------------------
+source toplevel.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 396.641 ; gain = 62.543
+Command: read_checkpoint -auto_incremental -incremental {C:/Work/VGA Display/vga-display-v3/project/vga-display.srcs/utils_1/imports/synth_1/seg7_display.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Work/VGA Display/vga-display-v3/project/vga-display.srcs/utils_1/imports/synth_1/seg7_display.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top toplevel -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14156
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1225.883 ; gain = 407.492
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'toplevel' [C:/Work/VGA Display/vga-display-v3/src/toplevel.vhdl:25]
+INFO: [Synth 8-638] synthesizing module 'vga_sync' [C:/Work/VGA Display/vga-display-v3/src/vga_sync.vhdl:19]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [C:/Work/VGA Display/vga-display-v3/src/clock_divider.vhdl:15]
+WARNING: [Synth 8-614] signal 'temp_clock' is read in the process but is not in the sensitivity list [C:/Work/VGA Display/vga-display-v3/src/clock_divider.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (0#1) [C:/Work/VGA Display/vga-display-v3/src/clock_divider.vhdl:15]
+INFO: [Synth 8-256] done synthesizing module 'vga_sync' (0#1) [C:/Work/VGA Display/vga-display-v3/src/vga_sync.vhdl:19]
+INFO: [Synth 8-638] synthesizing module 'handle_movement' [C:/Work/VGA Display/vga-display-v3/src/handle_movement.vhdl:20]
+	Parameter len_x bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'handle_movement' (0#1) [C:/Work/VGA Display/vga-display-v3/src/handle_movement.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'enemy_movement' [C:/Work/VGA Display/vga-display-v3/src/enemy_movement.vhdl:22]
+	Parameter len_x bound to: 20 - type: integer 
+	Parameter len_y bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'enemy_movement' (0#1) [C:/Work/VGA Display/vga-display-v3/src/enemy_movement.vhdl:22]
+INFO: [Synth 8-638] synthesizing module 'handle_firing' [C:/Work/VGA Display/vga-display-v3/src/handle_firing.vhdl:25]
+	Parameter len_x bound to: 30 - type: integer 
+	Parameter len_y bound to: 10 - type: integer 
+	Parameter len_x_b bound to: 4 - type: integer 
+	Parameter len_y_b bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'handle_firing' (0#1) [C:/Work/VGA Display/vga-display-v3/src/handle_firing.vhdl:25]
+INFO: [Synth 8-638] synthesizing module 'check_collision' [C:/Work/VGA Display/vga-display-v3/src/check_collision.vhdl:31]
+	Parameter len_x_e bound to: 20 - type: integer 
+	Parameter len_y_e bound to: 20 - type: integer 
+	Parameter len_x_p bound to: 30 - type: integer 
+	Parameter len_y_p bound to: 10 - type: integer 
+	Parameter len_x_b bound to: 4 - type: integer 
+	Parameter len_y_b bound to: 8 - type: integer 
+	Parameter NUMBER_OF_DIGITS bound to: 8 - type: integer 
+WARNING: [Synth 8-614] signal 'deaths' is read in the process but is not in the sensitivity list [C:/Work/VGA Display/vga-display-v3/src/check_collision.vhdl:45]
+WARNING: [Synth 8-614] signal 'kills' is read in the process but is not in the sensitivity list [C:/Work/VGA Display/vga-display-v3/src/check_collision.vhdl:45]
+INFO: [Synth 8-256] done synthesizing module 'check_collision' (0#1) [C:/Work/VGA Display/vga-display-v3/src/check_collision.vhdl:31]
+INFO: [Synth 8-638] synthesizing module 'seg7_display' [C:/Work/VGA Display/vga-display-v3/src/seg7_display.vhdl:22]
+	Parameter CLOCK_FREQUENCY bound to: 64'b0000000000000000000000000000000000000101111101011110000100000000 
+	Parameter NUMBER_OF_DIGITS bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'cycler' [C:/Work/VGA Display/vga-display-v3/src/cycler.vhdl:20]
+	Parameter MODULO bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'cycler' (0#1) [C:/Work/VGA Display/vga-display-v3/src/cycler.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'cycler__parameterized0' [C:/Work/VGA Display/vga-display-v3/src/cycler.vhdl:20]
+	Parameter MODULO bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'cycler__parameterized0' (0#1) [C:/Work/VGA Display/vga-display-v3/src/cycler.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'seg7_encoder' [C:/Work/VGA Display/vga-display-v3/src/seg7_encoder.vhdl:13]
+INFO: [Synth 8-226] default block is never used [C:/Work/VGA Display/vga-display-v3/src/seg7_encoder.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'seg7_encoder' (0#1) [C:/Work/VGA Display/vga-display-v3/src/seg7_encoder.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'seg7_display' (0#1) [C:/Work/VGA Display/vga-display-v3/src/seg7_display.vhdl:22]
+WARNING: [Synth 8-614] signal 'draw_player' is read in the process but is not in the sensitivity list [C:/Work/VGA Display/vga-display-v3/src/toplevel.vhdl:182]
+WARNING: [Synth 8-614] signal 'draw_bullet' is read in the process but is not in the sensitivity list [C:/Work/VGA Display/vga-display-v3/src/toplevel.vhdl:182]
+WARNING: [Synth 8-614] signal 'draw_enemy' is read in the process but is not in the sensitivity list [C:/Work/VGA Display/vga-display-v3/src/toplevel.vhdl:182]
+WARNING: [Synth 8-614] signal 'red' is read in the process but is not in the sensitivity list [C:/Work/VGA Display/vga-display-v3/src/toplevel.vhdl:182]
+WARNING: [Synth 8-614] signal 'grn' is read in the process but is not in the sensitivity list [C:/Work/VGA Display/vga-display-v3/src/toplevel.vhdl:182]
+WARNING: [Synth 8-614] signal 'blu' is read in the process but is not in the sensitivity list [C:/Work/VGA Display/vga-display-v3/src/toplevel.vhdl:182]
+INFO: [Synth 8-256] done synthesizing module 'toplevel' (0#1) [C:/Work/VGA Display/vga-display-v3/src/toplevel.vhdl:25]
+WARNING: [Synth 8-7129] Port x_p[9] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[8] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[7] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[6] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[5] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[4] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[7][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[7][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[7][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[7][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[6][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[6][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[6][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[6][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[5][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[5][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[5][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[5][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[4][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[4][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[4][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[4][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[3][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[3][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[3][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[3][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[2][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[2][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[2][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[2][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[1][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[1][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[1][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[1][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[0][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[0][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[0][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[0][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[9] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[8] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[7] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[6] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[5] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[4] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[3] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[2] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[1] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[0] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[9] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[8] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[7] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[6] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[5] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[4] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[3] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[2] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[1] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_y[0] in module enemy_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port buttons_in[1] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[9] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[8] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[7] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[6] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[5] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[4] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[3] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[2] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[1] in module handle_movement is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_x[0] in module handle_movement is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1322.984 ; gain = 504.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1322.984 ; gain = 504.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1322.984 ; gain = 504.594
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1322.984 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/Buttons.xdc]
+Finished Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/Buttons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Work/VGA Display/vga-display-v3/constraints/Buttons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/toplevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/Clock.xdc]
+Finished Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/Clock.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Work/VGA Display/vga-display-v3/constraints/Clock.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/toplevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/Reset.xdc]
+Finished Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/Reset.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Work/VGA Display/vga-display-v3/constraints/Reset.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/toplevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/VGA.xdc]
+Finished Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/VGA.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Work/VGA Display/vga-display-v3/constraints/VGA.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/toplevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/7SegLED.xdc]
+Finished Parsing XDC File [C:/Work/VGA Display/vga-display-v3/constraints/7SegLED.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Work/VGA Display/vga-display-v3/constraints/7SegLED.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/toplevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1383.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1383.391 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+WARNING: set_property IOSTANDARD could not find object (constraint file  {C:/Work/VGA Display/vga-display-v3/constraints/Buttons.xdc}, line 5).
+WARNING: set_property IOSTANDARD could not find object (constraint file  {C:/Work/VGA Display/vga-display-v3/constraints/VGA.xdc}, line 11).
+WARNING: set_property IOSTANDARD could not find object (constraint file  {C:/Work/VGA Display/vga-display-v3/constraints/VGA.xdc}, line 17).
+WARNING: set_property IOSTANDARD could not find object (constraint file  {C:/Work/VGA Display/vga-display-v3/constraints/VGA.xdc}, line 23).
+WARNING: set_property IOSTANDARD could not find object (constraint file  {C:/Work/VGA Display/vga-display-v3/constraints/7SegLED.xdc}, line 9).
+WARNING: set_property IOSTANDARD could not find object (constraint file  {C:/Work/VGA Display/vga-display-v3/constraints/7SegLED.xdc}, line 20).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 11    
+	   2 Input   12 Bit       Adders := 3     
+	   3 Input   12 Bit       Adders := 5     
+	   2 Input   11 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 20    
+	   2 Input    3 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               10 Bit    Registers := 9     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 8     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 19    
+	   5 Input    4 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'x_int_reg' and it is trimmed from '32' to '10' bits. [C:/Work/VGA Display/vga-display-v3/src/handle_firing.vhdl:40]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x_tmp_reg' and it is trimmed from '32' to '10' bits. [C:/Work/VGA Display/vga-display-v3/src/handle_firing.vhdl:47]
+WARNING: [Synth 8-7129] Port x_p[9] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[8] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[7] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[6] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[5] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[4] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_p[0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[7][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[7][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[7][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[7][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[6][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[6][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[6][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[6][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[5][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[5][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[5][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[5][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[4][3] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[4][2] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[4][1] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[4][0] in module check_collision is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score_in[3][3] in module check_collision is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3321] set_false_path : Empty from list for constraint at line 6 of {C:/Work/VGA Display/vga-display-v3/constraints/Buttons.xdc}. [{C:/Work/VGA Display/vga-display-v3/constraints/Buttons.xdc}:6]
+WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 10 of {C:/Work/VGA Display/vga-display-v3/constraints/7SegLED.xdc}. [{C:/Work/VGA Display/vga-display-v3/constraints/7SegLED.xdc}:10]
+WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 21 of {C:/Work/VGA Display/vga-display-v3/constraints/7SegLED.xdc}. [{C:/Work/VGA Display/vga-display-v3/constraints/7SegLED.xdc}:21]
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |   187|
+|3     |LUT1   |   120|
+|4     |LUT2   |   326|
+|5     |LUT3   |    88|
+|6     |LUT4   |   211|
+|7     |LUT5   |    92|
+|8     |LUT6   |    97|
+|9     |FDCE   |    64|
+|10    |FDPE   |     2|
+|11    |FDRE   |   273|
+|12    |FDSE   |     3|
+|13    |IBUF   |     5|
+|14    |OBUF   |    30|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1383.391 ; gain = 565.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 79 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 1383.391 ; gain = 504.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1383.391 ; gain = 565.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1383.391 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 187 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1383.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 6d4f004b
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 1383.391 ; gain = 962.863
+INFO: [Common 17-1381] The checkpoint 'C:/Work/VGA Display/vga-display-v3/project/vga-display.runs/synth_1/toplevel.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file toplevel_utilization_synth.rpt -pb toplevel_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May 18 13:46:22 2023...
